@@ -10,14 +10,27 @@
 <body>
 
     <!-- ヘッダー -->
-    <header class="mv-container">
+     <!-- 固定ヘッダー -->
+<header class="site-header">
+    <div class="header-content">
+        <h1 class="header-logo">くり林こうこう</h1>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#intro">政策</a></li>
+                <li><a href="#activity">活動</a></li>
+                <li><a href="#profile">プロフィール</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <section class="mv-container">
         <div class="hero-content">
             <h1><span class="herotext-small">鎌倉に孝行！</span><br>くり林こうこう</h1>
             <div class="mv-img-box">
             	<img src="./img/mv_kuribayashi.png" class="mv-img">
             </div>
         </div>
-    </header>
+    </section>
 
     <!-- メインセクション -->
     <section class="intro">
@@ -29,8 +42,10 @@
         自然と伝統を守りながら、街の前進に貢献する政治。<br><br>
 
         鎌倉に孝行！くり林こうこうです！</p>    
-        <div class="main-button-box">	
+        <div class="main-button-box">
+            <a href="seisaku.html">	
             <button class="main-button">主要政策を読む</button>
+        </a>
         </div>
     </section>
 
@@ -163,6 +178,44 @@
     </script>
 
     <style>
+        .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    font-size: 24px;
+    color: var(--main-color);
+    margin: 0;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+}
     /* モーダルのスタイル */
     .modal {
         display: none;
@@ -204,6 +257,15 @@
 
     /* PC用（1025px以上） */
     @media only screen and (min-width: 1025px) {
+        .site-header {
+        height: 80px;
+    }
+    .header-content {
+        height: 80px;
+    }
+    .mv-container {
+        margin-top: 80px;
+    }
         .activity-images {
             width: 100%;
             max-width: 1200px;
@@ -228,6 +290,15 @@
 
     /* タブレット用（768px-1024px） */
     @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .site-header {
+        height: 75px;
+    }
+    .header-content {
+        height: 75px;
+    }
+    .mv-container {
+        margin-top: 75px;
+    }
         .activity-images {
             width: 90%;
             margin: 0 auto;
@@ -251,6 +322,24 @@
 
     /* スマートフォン用（768px以下） */
     @media screen and (max-width: 767px) {
+        .site-header {
+        height: 70px;
+    }
+    .header-content {
+        height: 70px;
+    }
+    .header-logo {
+        font-size: 20px;
+    }
+    .header-nav ul {
+        gap: 15px;
+    }
+    .header-nav a {
+        font-size: 14px;
+    }
+    .mv-container {
+        margin-top: 70px;
+    }
         .activity-images {
             width: 100%;
         }
@@ -273,8 +362,7 @@
     </style>
 
 </body>
-</html>
-    
+</html>    
 
 <style type="text/css">
     :root {
@@ -461,6 +549,7 @@
     .profile-under-box{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     .profile-under-table>table{
