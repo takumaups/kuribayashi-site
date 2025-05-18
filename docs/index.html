@@ -13,10 +13,10 @@
      <!-- 固定ヘッダー -->
 <header class="site-header">
     <div class="header-content">
-        <h1 class="header-logo">くり林こうこう</h1>
+        <h2 class="header-logo">くり林こうこう</h2>
         <nav class="header-nav">
             <ul>
-                <li><a href="#intro">政策</a></li>
+                <li><a href="https://takumaups.github.io/kuribayashi-site/seisaku.html">政策</a></li>
                 <li><a href="#activity">活動</a></li>
                 <li><a href="#profile">プロフィール</a></li>
             </ul>
@@ -50,7 +50,7 @@
     </section>
 
     <!-- 活動紹介 -->
-    <section class="activity">
+    <section id="activity">
     	<div class="activity-text-box">
         <h2 class="activity-title">ACTIVITY</h2>
         <p class="activity-text">最新情報は各SNSにて共有しております</p>
@@ -66,7 +66,7 @@
     </section>
 
     <!-- プロフィール -->
-    <section class="profile">
+    <section id="profile">
         <h2>PROFILE</h2>
     </section>
 
@@ -178,6 +178,11 @@
     </script>
 
     <style>
+
+        *{
+            scroll-behavior: smooth;
+
+        }
         .site-header {
     position: fixed;
     top: 0;
@@ -207,6 +212,7 @@
     list-style: none;
     display: flex;
     gap: 30px;
+    font-size: 18px;
     margin: 0;
     padding: 0;
 }
@@ -232,7 +238,6 @@
     .modal-content {
         margin: auto;
         display: block;
-        max-width: 90%;
         max-height: 90vh;
     }
 
@@ -286,6 +291,9 @@
         .activity-small {
             width: 48%;
         }
+        .modal-content {
+        width: 50%;        
+        }
     }
 
     /* タブレット用（768px-1024px） */
@@ -317,6 +325,9 @@
         
         .activity-small {
             width: 48%;
+        }
+        .modal-content {
+        width: 80%;        
         }
     }
 
@@ -358,7 +369,11 @@
         .activity-small {
             width: 48%;
         }
+        .modal-content {
+        width: 80%;
     }
+    }
+    
     </style>
 
 </body>
@@ -494,7 +509,7 @@
     }
 
     /* プロフィール */
-    .profile {
+    #profile {
         text-align: center;
         padding: 0;
         background-image: url('./img/profile.png');
@@ -511,7 +526,7 @@
     }
 
     /* 文字を見やすくするためのオーバーレイ */
-    .profile::before {
+    #profile::before {
         content: '';
         position: absolute;
         top: 0;
@@ -523,8 +538,8 @@
     }
 
     /* h2とpタグのスタイリング */
-    .profile h2,
-    .profile p {
+    #profile h2,
+    #profile p {
         z-index: 2;
         color: var(--main-color);
         margin: 10px 0;
@@ -711,7 +726,7 @@
     }
 
     /* プロフィールセクション */
-    .profile {
+    #profile {
         background-image: url('./img/profile.png');
         background-size: cover;
         background-position: center;
@@ -723,7 +738,7 @@
         position: relative;
     }
 
-    .profile::before {
+    #profile::before {
         content: '';
         position: absolute;
         width: 100%;
@@ -732,7 +747,7 @@
         z-index: 1;
     }
 
-    .profile h2 {
+    #profile h2 {
         font-size: 6vw;
         z-index: 2;
         color: var(--main-color);
@@ -923,7 +938,7 @@ body {
 }
 
 /* プロフィールセクション */
-.profile {
+#profile {
     background-image: url('./img/profile.png');
     background-size: cover;
     background-position: center;
@@ -941,7 +956,7 @@ body {
     margin: 0;
 }
 
-.profile::before {
+#profile::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -950,7 +965,7 @@ body {
     z-index: 1;
 }
 
-.profile h2 {
+#profile h2 {
     font-size: 9vw;
     z-index: 2;
     color: var(--main-color);
